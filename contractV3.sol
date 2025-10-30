@@ -1,6 +1,3 @@
-/**
- *Submitted for verification at curtis.apescan.io on 2025-10-27
- */
 
 // SPDX-License-Identifier: MIT
 
@@ -816,6 +813,7 @@ contract ClaimContract is Ownable {
             uint256 allocation = allocations[i];
             require(user != address(0), "Invalid address");
             require(allocation > 0, "Allocation must be greater than zero");
+
             require(
                 vestingType[i] >= 1 && vestingType[i] <= 6,
                 "Invalid vesting type"
@@ -832,6 +830,7 @@ contract ClaimContract is Ownable {
             });
 
             totalAllocated += allocation;
+            
         }
     }
 
